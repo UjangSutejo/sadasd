@@ -1,0 +1,10 @@
+{
+  "profile": "openai",
+  "env": {
+    "OPENAI_BASE_URL": "https://api.blackbox.ai/api/v1",
+    "OPENAI_MODEL": "blackboxai/minimax/minimax-free",
+    "OPENAI_API_FORMAT": "chat_completions",
+    "OPENAI_API_KEY": "sk-jo34qemOXpjgVgs87TGWJw"
+  },
+  "createdAt": "2026-06-17T12:41:35.529Z"
+}
