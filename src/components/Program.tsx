@@ -1,3 +1,5 @@
+import ButtonTextHover from "./ButtonTextHover";
+
 export default function Program() {
   return (
     <section id="program" className="py-32 bg-white border-t border-neutral-100">
@@ -5,7 +7,7 @@ export default function Program() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-16 md:gap-24 items-start">
           <div className="md:col-span-4">
             <div className="mb-8">
-              <span className="label-text block mb-4">(OUR Program)</span>
+              <span className="text-[20px] leading-[1.2] font-bold tracking-tighter uppercase block mb-8">(OUR Program)</span>
               <img
                 alt="Process"
                 className="w-full h-auto"
@@ -77,10 +79,11 @@ export default function Program() {
                 and involved.
               </p>
               <a
-                className="mt-12 inline-flex items-center bg-black text-white text-[11px] font-black uppercase py-4 px-11 rounded-full hover:bg-neutral-800"
+                className="relative mt-12 inline-flex items-center bg-black text-white text-[11px] font-black uppercase py-4 px-11 rounded-full"
                 href="#"
               >
-                Get To Know Our Process +
+                <span className="invisible">Get To Know Our Process +</span>
+                <ButtonTextHover label="Get To Know Our Process +" />
               </a>
             </div>
           </div>

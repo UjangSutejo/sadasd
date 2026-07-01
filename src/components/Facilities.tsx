@@ -1,3 +1,5 @@
+import ButtonTextHover from "./ButtonTextHover";
+
 export default function Facilities() {
   return (
     <section id="facilities" className="py-24 bg-neutral-50 border-t border-neutral-100">
@@ -12,7 +14,7 @@ export default function Facilities() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-2 md:gap-x-4 gap-y-12 md:gap-y-20">
           {/* Learning Hall */}
-          <div className="flex flex-col md:mt-[500px]">
+          <div className="flex flex-col">
             <div className="overflow-hidden mb-4">
               <img
                 alt="Learning Hall"
@@ -22,22 +24,22 @@ export default function Facilities() {
             </div>
             <div className="flex justify-between items-end pt-1">
               <div className="flex items-baseline gap-4">
-                <span className="text-[12px] md:text-[14px] font-black uppercase tracking-[0.02em]">
+                <span className="text-[20px] leading-[1.2] font-medium tracking-[-0.01em] uppercase">
                   (01)
                 </span>
-                <h3 className="text-[12px] md:text-[14px] font-black uppercase tracking-[0.02em]">
+                <h3 className="text-[20px] leading-[1.2] font-medium tracking-[-0.01em] uppercase text-black">
                   Learning hall
                 </h3>
               </div>
-              <span className="text-[12px] md:text-[14px] font-black uppercase tracking-[0.02em] text-neutral-700">
+              <span className="text-[20px] leading-[1.2] font-medium tracking-[-0.01em] uppercase text-neutral-700">
                 2024
               </span>
             </div>
           </div>
 
           {/* Art Room */}
-          <div className="flex flex-col md:mt-10">
-            <div className="overflow-hidden mb-4">
+          <div className="flex flex-col">
+            <div className="overflow-hidden">
               <img
                 alt="Art Room"
                 className="w-full aspect-[0.75/1] object-cover"
@@ -46,14 +48,14 @@ export default function Facilities() {
             </div>
             <div className="flex justify-between items-end pt-1">
               <div className="flex items-baseline gap-4">
-                <span className="text-[12px] md:text-[14px] font-black uppercase tracking-[0.02em]">
+                <span className="text-[20px] leading-[1.2] font-medium tracking-[-0.01em] uppercase">
                   (02)
                 </span>
-                <h3 className="text-[12px] md:text-[14px] font-black uppercase tracking-[0.02em]">
+                <h3 className="text-[20px] leading-[1.2] font-medium tracking-[-0.01em] uppercase text-black">
                   Art room
                 </h3>
               </div>
-              <span className="text-[12px] md:text-[14px] font-black uppercase tracking-[0.02em] text-neutral-700">
+              <span className="text-[20px] leading-[1.2] font-medium tracking-[-0.01em] uppercase text-neutral-700">
                 2024
               </span>
             </div>
@@ -71,14 +73,14 @@ export default function Facilities() {
               </div>
               <div className="flex justify-between items-end pt-1">
                 <div className="flex items-baseline gap-4">
-                  <span className="text-[12px] md:text-[14px] font-black uppercase tracking-[0.02em]">
+                  <span className="text-[20px] leading-[1.2] font-medium tracking-[-0.01em] uppercase">
                     (03)
                   </span>
-                  <h3 className="text-[12px] md:text-[14px] font-black uppercase tracking-[0.02em]">
+                  <h3 className="text-[20px] leading-[1.2] font-medium tracking-[-0.01em] uppercase text-black">
                     Boys Bedroom
                   </h3>
                 </div>
-                <span className="text-[12px] md:text-[14px] font-black uppercase tracking-[0.02em] text-neutral-700">
+                <span className="text-[20px] leading-[1.2] font-medium tracking-[-0.01em] uppercase text-neutral-700">
                   2023
                 </span>
               </div>
@@ -96,14 +98,14 @@ export default function Facilities() {
             </div>
             <div className="flex justify-between items-end pt-1">
               <div className="flex items-baseline gap-4">
-                <span className="text-[12px] md:text-[14px] font-black uppercase tracking-[0.02em]">
+                <span className="text-[20px] leading-[1.2] font-medium tracking-[-0.01em] uppercase">
                   (04)
                 </span>
-                <h3 className="text-[12px] md:text-[14px] font-black uppercase tracking-[0.02em]">
+                <h3 className="text-[20px] leading-[1.2] font-medium tracking-[-0.01em] uppercase text-black">
                   Girls Bedroom
                 </h3>
               </div>
-              <span className="text-[12px] md:text-[14px] font-black uppercase tracking-[0.02em] text-neutral-700">
+              <span className="text-[20px] leading-[1.2] font-medium tracking-[-0.01em] uppercase text-neutral-700">
                 2023
               </span>
             </div>
@@ -111,10 +113,11 @@ export default function Facilities() {
         </div>
         <div className="flex justify-center mt-32">
           <a
-            className="bg-black text-white text-[10px] font-black uppercase py-4 px-12 rounded-full hover:bg-neutral-800 transition-colors"
+            className="relative inline-flex items-center bg-black text-white text-[11px] font-black uppercase py-4 px-12 rounded-full"
             href="#"
           >
-            View More Facilities +
+            <span className="invisible">View More Facilities +</span>
+            <ButtonTextHover label="View More Facilities +" />
           </a>
         </div>
       </div>

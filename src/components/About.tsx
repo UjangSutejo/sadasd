@@ -1,3 +1,5 @@
+import ButtonTextHover from "./ButtonTextHover";
+
 export default function About() {
   return (
     <section
@@ -34,10 +36,11 @@ export default function About() {
                 of the child, and the creative vision of our childcare team.
               </p>
               <a
-                className="inline-flex items-center gap-2 bg-black text-white text-[11px] font-black uppercase py-4 px-11 rounded-full hover:bg-neutral-800 transition-colors tracking-[0.02em]"
+                className="relative inline-flex items-center gap-2 bg-black text-white text-[11px] font-black uppercase py-4 px-11 rounded-full tracking-[0.02em]"
                 href="#"
               >
-                Learn More About Our Buisness +
+                <span className="invisible">Learn More About Our Buisness +</span>
+                <ButtonTextHover label="Learn More About Our Buisness +" />
               </a>
             </div>
           </div>

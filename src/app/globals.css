@@ -1,72 +1,3 @@
-body {
-  font-family: "PP Neue Montreal Variable", "PP Neue Montreal", sans-serif;
-}
-
-.hero-font {
-  font-family: "Inter", sans-serif;
-}
-
-.heading-ultra-tight {
-  letter-spacing: -0.06em;
-  line-height: 0.85;
-  color: #000;
-}
-
-.experience-section {
-  font-family: "PP Neue Montreal Variable", "PP Neue Montreal", "Inter", sans-serif;
-}
-
-.experience-headline {
-  font-family: inherit;
-  font-weight: 400;
-  letter-spacing: -0.075em;
-  line-height: 0.86;
-}
-
-.label-text {
-  font-size: 10px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-@media (min-width: 768px) {
-  .hero-desktop-nav {
-    display: flex !important;
-  }
-}
-
-.mobile-menu-overlay {
-  opacity: 0;
-  pointer-events: none;
-}
-
-.mobile-menu-overlay.is-open {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.mobile-menu-overlay.is-open .mobile-menu-panel {
-  transform: translateY(0);
-}
-
-body.menu-open {
-  overflow: hidden;
-}
-
-.mobile-menu-link {
-  -webkit-tap-highlight-color: transparent;
-}
-
-.mobile-menu-link:hover,
-.mobile-menu-link:focus-visible {
-  opacity: 0.72;
-}
-
-#mobile-menu-open,
-#mobile-menu-close {
-  -webkit-tap-highlight-color: transparent;
-}
-
 @import "tailwindcss";
 
 :root {
@@ -88,6 +19,10 @@ body {
 }
 
 @layer utilities {
+  .hero-font {
+    font-family: "Inter", sans-serif;
+  }
+
   .heading-ultra-tight {
     letter-spacing: -0.06em;
     line-height: 0.85;
@@ -110,10 +45,6 @@ body {
     font-size: 10px;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-  }
-
-  .hero-font {
-    font-family: "Inter", sans-serif;
   }
 
   .mobile-menu-overlay {

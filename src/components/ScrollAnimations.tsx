@@ -47,31 +47,33 @@ export default function ScrollAnimations() {
         pinSpacing: false,
       });
 
-      // Hero: gradually darkens when scrolling
-      gsap.to(hero, {
-        filter: "brightness(0.5)",
-        ease: "none",
-        scrollTrigger: {
-          trigger: hero,
-          start: "top top",
-          end: () => `+=${navHeight}`,
-          scrub: true,
-        },
-      });
+      // Hero bg redup via scroll callback (desktop only)
+      const heroBg = hero.querySelector("[data-hero-bg]") as HTMLElement;
+      if (heroBg) {
+        const isDesktop = window.matchMedia("(min-width: 768px)").matches;
+        gsap.set(heroBg, { opacity: 0.8 });
 
-      // Fade images inside hero
-      heroImgs?.forEach((img) => {
-        gsap.to(img, {
-          opacity: 0,
-          ease: "none",
-          scrollTrigger: {
-            trigger: hero,
-            start: "top top",
-            end: () => `+=${navHeight}`,
-            scrub: true,
-          },
-        });
-      });
+        if (isDesktop) {
+          lenis.on("scroll", ({ scroll }: { scroll: number }) => {
+            const fadeStart = 0;
+            const fadeEnd = navHeight * 0.3;
+            const progress = Math.min(1, Math.max(0, (scroll - fadeStart) / (fadeEnd - fadeStart)));
+            const opacity = 0.8 - progress * 0.6;
+            heroBg.style.opacity = String(opacity);
+          });
+        } else {
+          gsap.to(heroBg, {
+            opacity: 0.2,
+            ease: "none",
+            scrollTrigger: {
+              trigger: about,
+              start: "top bottom",
+              end: "top top",
+              scrub: true,
+            },
+          });
+        }
+      }
 
       // About slide up dari bawah
       gsap.fromTo(

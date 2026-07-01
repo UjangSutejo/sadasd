@@ -1,16 +1,25 @@
+import ButtonTextHover from "./ButtonTextHover";
+import NavTextHover from "./NavTextHover";
+import ScrollRevealText from "./ScrollRevealText";
+
 export default function Footer() {
   return (
     <footer className="bg-neutral-100 pt-32 pb-12 px-6">
       <div className="max-w-screen-2xl mx-auto">
         {/* Gigantic Footer Text */}
-        <div className="mb-40">
-          <h2 className="heading-ultra-tight text-7xl md:text-[14rem] font-semi uppercase leading-none">
-            Focused on Growth<br />
-            Driven by creativity
-          </h2>
+        <div className="mb-40 text-left">
+          <ScrollRevealText
+            text={"Focused on Growth\nDriven by creativity"}
+            splitMode="letter"
+            animationStyle="mask"
+            staggerMs={60}
+            animDuration={800}
+            className="heading-ultra-tight text-[16vw] lg:text-[14rem] font-semi uppercase leading-none"
+          />
           <div className="flex justify-center mt-20">
-            <button className="bg-black text-white text-[10px] font-black uppercase py-4 px-12 rounded-full">
-              Tell us about your project +
+            <button className="relative inline-flex items-center bg-black text-white text-[11px] font-black uppercase py-4 px-12 rounded-full">
+              <span className="invisible">Tell us about your project +</span>
+              <ButtonTextHover label="Tell us about your project +" />
             </button>
           </div>
         </div>
@@ -25,29 +34,19 @@ export default function Footer() {
             <span className="label-text block mb-6 font-bold">(NAVIGATION)</span>
             <ul className="space-y-2 text-2xl font-bold tracking-tighter">
               <li>
-                <a className="hover:underline" href="#hero">
-                  Home
-                </a>
+                <a href="#hero"><NavTextHover label="Home" /></a>
               </li>
               <li>
-                <a className="hover:underline" href="#about">
-                  About
-                </a>
+                <a href="#about"><NavTextHover label="About" /></a>
               </li>
               <li>
-                <a className="hover:underline" href="#facilities">
-                  Facilities
-                </a>
+                <a href="#facilities"><NavTextHover label="Facilities" /></a>
               </li>
               <li>
-                <a className="hover:underline" href="#program">
-                  Program
-                </a>
+                <a href="#program"><NavTextHover label="Program" /></a>
               </li>
               <li>
-                <a className="hover:underline" href="#contact">
-                  Contact us
-                </a>
+                <a href="#contact"><NavTextHover label="Contact us" /></a>
               </li>
             </ul>
           </div>
